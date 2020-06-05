@@ -1,4 +1,4 @@
-# My Prompt
+ï»¿# My Prompt
 function prompt () {  
     [String]$currentPath = Get-Location
     $currentPath = $currentPath.Replace("$HOME", "~")
@@ -11,7 +11,7 @@ function prompt () {
     $dateTime = (Get-Date -F F)
 
     Write-Host "`r`n "                      -NoNewLine
-    Write-Host "ÀsŠÔ: ${executionTime} sec"             -NoNewLine
+    Write-Host "å®Ÿè¡Œæ™‚é–“: ${executionTime} sec"             -NoNewLine
     Write-Host "`r`n"                                       -NoNewLine
     Write-Host "`r`n["                                      -NoNewLine
     Write-Host "$($env:USERNAME)@$($env:COMPUTERNAME) "     -NoNewLine -ForeGroundColor DarkGreen
@@ -30,8 +30,8 @@ Set-Location "C:\Users\sgktm\Develop"
 ## emacs
 Set-PsReadlineOption -EditMode Emacs -BellStyle None
 
-Write-Host "Àsƒ|ƒŠƒV[‚Í" (Get-ExecutionPolicy) "‚Å‚·B" -ForegroundColor "Yellow"
-Write-Host "Œ»İ‚ÌƒfƒBƒŒƒNƒgƒŠ‚Í" (Get-Location) "‚Å‚·B" -ForegroundColor "Yellow"
+Write-Host "å®Ÿè¡Œãƒãƒªã‚·ãƒ¼ã¯" (Get-ExecutionPolicy) "ã§ã™ã€‚" -ForegroundColor "Yellow"
+Write-Host "ç¾åœ¨ã®ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã¯" (Get-Location) "ã§ã™ã€‚" -ForegroundColor "Yellow"
 Write-Host
 
 Set-Alias vim 'C:\Program Files (x86)\vim82-kaoriya-win64\vim.exe'
