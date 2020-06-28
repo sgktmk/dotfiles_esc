@@ -17,7 +17,7 @@ function prompt () {
     Write-Host "$($env:USERNAME)@$($env:COMPUTERNAME) "     -NoNewLine -ForeGroundColor DarkGreen
     Write-Host "${currentPath} "                            -NoNewLine -ForeGroundColor DarkCyan
     Write-VcsStatus
-    Write-Host "]`r`n"                                      -NoNewLine
+    Write-Host "]`r`n "                                     -NoNewLine
     Write-Host "${dateTime}"                                -NoNewLine -ForeGroundColor Gray
     Write-Host "`r`n"                                       -NoNewLine
     Write-Host " > "                                        -NoNewLine
@@ -42,10 +42,16 @@ if (Test-Path($ChocolateyProfile)) {
   Import-Module "$ChocolateyProfile"
 }
 
-# UNIX Like Alias
-#function customSudo {Start-Process Powershell.exe -Verb runas}
-#Set-Alias sudo customSudo
+## Java Alias
+#function customJavac {javac -encoding utf8}
+#Set-Alias javac customJavac
 
+#function customJava {java -cp .\}
+#Set-Alias java customJava
+
+function go {vdesk on:2 noswitch:false run:chrome ; sleep 5 ; vdesk on:3 noswitch:false run:code ..\Develop\}
+function chrome{vdesk on:2 noswitch:false run:chrome}
+#function code{vdesk on:3 noswitch:false run:code ..\Develop\}
 
 # For Git
 Import-Module 'C:\tools\poshgit\dahlbyk-posh-git-9bda399\src\posh-git.psd1'
